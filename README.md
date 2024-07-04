@@ -13,11 +13,19 @@ The project is set up as follows.
 in a positive even number of steps
 
 The steps to complete this project are given.
-- create three BDDs names RR, EVEN, and PRIME to represent the sets "R," "even," and "prime" respectively
-- verify the three BDDs are correct using these test cases
-    - RR(27, 3) is true;
+1. create three BDDs names RR, EVEN, and PRIME to represent the sets "R," "even," and "prime" respectively
+2. verify the three BDDs are correct using these test cases
+    - RR(27, 3) is true
     - RR(16, 20) is false
     - EVEN (14) is true
     - EVEN (13) is false
-    - PRIM E(7) is true
-    - PRIM E(2) is false 
+    - PRIME(7) is true
+    - PRIME(2) is false
+3. from the BDD RR, create a new BDD RR2 to represent all node pairs reachable in two steps (whereas RR contains all node pairs reachable in one step)
+4. verify RR2 is correct using these test cases
+    - RR2(27, 6) is true
+    - RR2(27, 9) is false
+5. use the transitive closure to compute RR2star from RR2 (RR2star will thus contain all pairs of nodes reachable in a positve even number of steps)
+6. lastly, use all the BDDS recently made to evalute Statement A: for each node u in "prime", there is a node v in "even" such that u can reach v
+in a positive even number of steps
+
